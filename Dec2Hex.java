@@ -22,11 +22,13 @@ class Dec2Hex
                 catch (NumberFormatException e) 
                 {
                     System.err.println("Argument" + args[0] + " must be an integer.");
+		    System.exit;
                 }
             }
             else if (args.length == 0) 
             {
                 System.err.println("Argument" + args[0] + " must not be null.");
+		System.exit;
             }
         }
 
