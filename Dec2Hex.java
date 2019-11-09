@@ -7,7 +7,7 @@ class Dec2Hex
 
     public static void main(String args[])
     {
-        if (args.length > 0) 
+        while (args.length > 0 and args !== null) 
         {
             try 
             {
@@ -16,7 +16,6 @@ class Dec2Hex
             catch (NumberFormatException e) 
             {
                 System.err.println("Argument" + args[0] + " must be an integer.");
-                System.exit(1);
             }
         }
 
