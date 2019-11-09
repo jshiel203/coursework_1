@@ -8,29 +8,24 @@ class Dec2Hex
     public static void main(String args[])
     {
         
-        boolean check = false;
-                
-        while (check == false) 
+        if (args.length > 0) 
         {
-            if (args.length > 0) 
+            try 
             {
-                try 
-                {
-                    Arg1 = Integer.parseInt(args[0]);
-		    check = true;
-                } 
-                catch (NumberFormatException e) 
-                {
-                    System.err.println("Argument" + args[0] + " must be an integer.");
-		    System.exit(1);
-                }
-            }
-            else if (args.length == 0) 
+                Arg1 = Integer.parseInt(args[0]);
+            } 
+            catch (NumberFormatException e) 
             {
-                System.err.println("Argument must not be null.");
-		System.exit(1);
+                System.err.println("Argument" + args[0] + " must be an integer.");
+                System.exit(1);
             }
         }
+        else if (args.length == 0) 
+        {
+            System.err.println("Argument must not be null.");
+            System.exit(1);
+        }
+        
 
     	char ch[]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
          int rem, num;
