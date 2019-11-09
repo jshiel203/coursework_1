@@ -17,7 +17,7 @@ class Dec2Hex
                 try 
                 {
                     Arg1 = Integer.parseInt(args[0]);
-		    check == true;
+		    check = true;
                 } 
                 catch (NumberFormatException e) 
                 {
