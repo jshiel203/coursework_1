@@ -7,15 +7,25 @@ class Dec2Hex
 
     public static void main(String args[])
     {
-        while (args.length > 0 and args !== null) 
+        
+        boolean check = false;
+                
+        while (check == false) 
         {
-            try 
+            if (args.length > 0) 
             {
-                Arg1 = Integer.parseInt(args[0]);
-            } 
-            catch (NumberFormatException e) 
+                try 
+                {
+                    Arg1 = Integer.parseInt(args[0]);
+                } 
+                catch (NumberFormatException e) 
+                {
+                    System.err.println("Argument" + args[0] + " must be an integer.");
+                }
+            }
+            else if (args.length == 0) 
             {
-                System.err.println("Argument" + args[0] + " must be an integer.");
+                System.err.println("Argument" + args[0] + " must not be null.");
             }
         }
 
