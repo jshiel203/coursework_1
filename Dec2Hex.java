@@ -27,7 +27,7 @@ class Dec2Hex
             }
             else if (args.length == 0) 
             {
-                System.err.println("Argument" + args[0] + " must not be null.");
+                System.err.println("Argument must not be null.");
 		System.exit(1);
             }
         }
